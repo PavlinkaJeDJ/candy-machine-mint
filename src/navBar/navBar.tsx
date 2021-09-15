@@ -26,9 +26,9 @@ const navBar = () => {
             <img src={penguin} style={{width: '30px'}}/>
           </a>  
         </div>
-        <div style={{...frowBetween, width: '25%'}}>
+        <div style={{...frowBetween, width: '15%'}}>
           <Button style={{color: 'white'}} href='https://discord.com/'>Discord</Button>
-          <Button style={{background: '#6163ff', color: 'white'}} href='https://twitter.com/'>Twitter</Button>
+                  <Button style={{ background: '#DA291C', color: 'white' }} href='https://twitter.com/FastFoodSMB'>Twitter</Button>
         </div>
 
       </div>

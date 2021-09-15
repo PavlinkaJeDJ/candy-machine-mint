@@ -19,13 +19,13 @@ import {
   shortenAddress,
 } from "./candy-machine";
 
-const ConnectButton = styled(WalletDialogButton)``;
+const ConnectButton = styled(WalletDialogButton)`background: #DA291C; color: #FFC72C`;
 
-const CounterText = styled.span``; // add your styles here
+const CounterText = styled.span`background: #DA291C; color: #FFC72C`; // add your styles here
 
-const MintContainer = styled.div``; // add your styles here
+const MintContainer = styled.div`background: #DA291C; color: #FFC72C`; // add your styles here
 
-const MintButton = styled(Button)`background: #6163ff; color: white`; // add your styles here
+const MintButton = styled(Button)`background: #DA291C; color: #FFC72C`; // add your styles here
 
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
@@ -176,14 +176,25 @@ const Home = (props: HomeProps) => {
       } */}
       
       <div style={{display: 'flex', flexDirection: 'row', marginBottom: '5px'}}>
-        <h1 style={{color: 'white', fontSize: '42px', marginBottom: '5px', marginTop: '5px'}}>Sol</h1>
-        <h1 style={{color: '#5658dd', fontSize: '42px', marginBottom: '5px',  marginTop: '5px'}}>Penguins</h1>
+              <h1 style={{ color: '#FFC72C', fontSize: '42px', marginBottom: '5px', marginTop: '5px' }}>Fast Food</h1>
+              <span>&nbsp;&nbsp;</span>
+        <h1 style={{ color: 'white', fontSize: '42px', marginBottom: '5px', marginTop: '5px' }}>SMB</h1>
       </div>
 
-      <h3 style={{color: '#9ca9b3', marginBottom: '20px'}}>8,888 SolPenguins sliding around on the Solana blockchain.</h3>
+      <h3 style={{ color: 'white', marginBottom: '20px'}}>Fast Food Solana Monkey Business. 555 monkeys each for 0.5 SOL</h3>
 
       {!wallet.connected && <ConnectButton>Connect Wallet</ConnectButton> }
 
+          {wallet.connected &&
+              <>
+              <div style={{ display: 'flex', flexDirection: 'row', marginBottom: '1px' }}>
+                  <h1 style={{ color: '#FFC72C', fontSize: '12px', marginBottom: '5px', marginTop: '5px' }}>Address: {shortenAddress(wallet.publicKey?.toBase58() || "")}</h1>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'row', marginBottom: '1px' }}>
+                  <h1 style={{ color: '#FFC72C', fontSize: '12px', marginBottom: '5px', marginTop: '5px' }}>Balance: {(balance || 0).toLocaleString()} SOL</h1>
+             </div>
+              </>
+          }
       <MintContainer>
         {wallet.connected && 
         <MintButton
@@ -197,7 +208,7 @@ const Home = (props: HomeProps) => {
               isMinting ? (
                 <CircularProgress />
                 ) : (
-                  "MINT"
+                  "MINT ONE FOR 0.5 SOL"
                   )
                   ) : (
                     <Countdown
