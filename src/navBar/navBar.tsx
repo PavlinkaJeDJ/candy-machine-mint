@@ -28,7 +28,7 @@ const navBar = () => {
         </div>
         <div style={{...frowBetween, width: '6%'}}>
           
-        <Button style={{ background: '#DA291C', color: 'white' }} href='https://twitter.com/FastFoodSMB'>Twitter</Button>
+                  <Button style={{ background: '#DA291C', color: '#FFC72C' }} href='https://twitter.com/FastFoodSMB'>   Twitter   </Button>
         </div>
 
       </div>
