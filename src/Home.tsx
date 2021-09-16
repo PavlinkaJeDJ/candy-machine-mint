@@ -181,11 +181,8 @@ const Home = (props: HomeProps) => {
         <h1 style={{ color: 'white', fontSize: '42px', marginBottom: '5px', marginTop: '5px' }}>SMB</h1>
           </div>
 
-          <div>
-              <h4 style={{ color: 'white', fontSize: '25px', marginBottom: '5px', marginTop: '5px' }}>Mint Date: 9/16 @ 6PM EST / 10PM UTC</h4>
-          </div>   
-
-          <h3 style={{ color: 'white', marginBottom: '20px' }}>555 Fast Food Solana Monkeys</h3>
+          
+          <h3 style={{ color: 'white', marginBottom: '20px' }}>Collection of only 555 Fast Food Solana Monkeys</h3>
           
           
 
@@ -229,16 +226,12 @@ const Home = (props: HomeProps) => {
         }
           </MintContainer>
 
+          <div>
+              <h4 style={{ color: 'white', fontSize: '15px', marginBottom: '5px', marginTop: '5px' }}>Mint Date: 9/16 @ 6PM EST / 10PM UTC</h4>
+          </div>  
 
-          <Countdown
-              date={startDate}
-              onMount={({ completed }) => completed && setIsActive(true)}
-              onComplete={() => setIsActive(true)}
-              renderer={renderCounter}
-          />
-                    )
 
-      <img src={penguin} style={{width: '350px', marginTop: '10px'}}/>
+      <img src={penguin} style={{width: '350px', marginTop: '20px'}}/>
 
       <Snackbar
         open={alertState.open}
