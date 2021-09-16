@@ -21,7 +21,7 @@ import {
 
 const ConnectButton = styled(WalletDialogButton)`background: #DA291C; color: #FFC72C`;
 
-const CounterText = styled.span`background: #DA291C; color: #FFC72C`; // add your styles here
+const CounterText = styled.span`color: #FFC72C`; // add your styles here
 
 const MintContainer = styled.div`background: #DA291C; color: #FFC72C`; // add your styles here
 
@@ -179,9 +179,14 @@ const Home = (props: HomeProps) => {
               <h1 style={{ color: '#FFC72C', fontSize: '42px', marginBottom: '5px', marginTop: '5px' }}>Fast Food</h1>
               <span>&nbsp;&nbsp;</span>
         <h1 style={{ color: 'white', fontSize: '42px', marginBottom: '5px', marginTop: '5px' }}>SMB</h1>
-      </div>
+          </div>
+
+          <div>
+              <h4 style={{ color: 'white', fontSize: '25px', marginBottom: '5px', marginTop: '5px' }}>Mint Date: 9/16 @ 6PM EST / 10PM UTC</h4>
+          </div>   
 
           <h3 style={{ color: 'white', marginBottom: '20px' }}>555 Fast Food Solana Monkeys</h3>
+          
           
 
 
@@ -190,10 +195,10 @@ const Home = (props: HomeProps) => {
           {wallet.connected &&
               <>
               <div style={{ display: 'flex', flexDirection: 'row', marginBottom: '1px' }}>
-                  <h1 style={{ color: '#FFC72C', fontSize: '12px', marginBottom: '5px', marginTop: '5px' }}>Address: {shortenAddress(wallet.publicKey?.toBase58() || "")}</h1>
+                  <h1 style={{ color: 'white', fontSize: '12px', marginBottom: '5px', marginTop: '5px' }}>Address: {shortenAddress(wallet.publicKey?.toBase58() || "")}</h1>
               </div>
               <div style={{ display: 'flex', flexDirection: 'row', marginBottom: '1px' }}>
-                  <h1 style={{ color: '#FFC72C', fontSize: '12px', marginBottom: '5px', marginTop: '5px' }}>Balance: {(balance || 0).toLocaleString()} SOL</h1>
+                  <h1 style={{ color: 'white', fontSize: '12px', marginBottom: '5px', marginTop: '5px' }}>Balance: {(balance || 0).toLocaleString()} SOL</h1>
              </div>
               </>
           }
@@ -222,9 +227,18 @@ const Home = (props: HomeProps) => {
                     )}
         </MintButton>
         }
-      </MintContainer>
+          </MintContainer>
 
-      <img src={penguin} style={{width: '350px', marginTop: '20px'}}/>
+
+          <Countdown
+              date={startDate}
+              onMount={({ completed }) => completed && setIsActive(true)}
+              onComplete={() => setIsActive(true)}
+              renderer={renderCounter}
+          />
+                    )
+
+      <img src={penguin} style={{width: '350px', marginTop: '10px'}}/>
 
       <Snackbar
         open={alertState.open}
@@ -251,7 +265,7 @@ interface AlertState {
 const renderCounter = ({ days, hours, minutes, seconds, completed }: any) => {
   return (
     <CounterText>
-      {hours} hours, {minutes} minutes, {seconds} seconds
+          Countdown: {hours} hours, {minutes} minutes, {seconds} seconds
     </CounterText>
   );
 };
