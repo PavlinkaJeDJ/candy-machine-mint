@@ -182,7 +182,7 @@ const Home = (props: HomeProps) => {
           </div>
 
           
-          <h3 style={{ color: 'white', marginBottom: '20px' }}>Collection of only 555 Fast Food Solana Monkeys</h3>
+          <h3 style={{ color: 'white', marginBottom: '20px' }}>555 Fast Food Solana Monkeys</h3>
           
           
 
@@ -227,7 +227,7 @@ const Home = (props: HomeProps) => {
           </MintContainer>
 
           <div>
-              <h4 style={{ color: 'white', fontSize: '15px', marginBottom: '5px', marginTop: '5px' }}>Mint Date: 9/16 @ 6PM EST / 10PM UTC</h4>
+              <h4 style={{ color: 'white', fontSize: '15px', marginBottom: '10px', marginTop: '10px' }}>Mint Date: 9/16 @ 6PM EST / 10PM UTC</h4>
           </div>  
 
 
