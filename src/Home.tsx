@@ -181,7 +181,9 @@ const Home = (props: HomeProps) => {
         <h1 style={{ color: 'white', fontSize: '42px', marginBottom: '5px', marginTop: '5px' }}>SMB</h1>
       </div>
 
-      <h3 style={{ color: 'white', marginBottom: '20px'}}>555 Fast Food Solana Monkeys</h3>
+          <h3 style={{ color: 'white', marginBottom: '20px' }}>555 Fast Food Solana Monkeys</h3>
+          
+
 
       {!wallet.connected && <ConnectButton>Connect Wallet</ConnectButton> }
 
@@ -210,7 +212,7 @@ const Home = (props: HomeProps) => {
                 ) : (
                   "MINT ONE FOR 0.5 SOL"
                   )
-                  ) : (
+                  ) : ( 
                     <Countdown
                     date={startDate}
                     onMount={({ completed }) => completed && setIsActive(true)}
@@ -222,7 +224,7 @@ const Home = (props: HomeProps) => {
         }
       </MintContainer>
 
-      <img src={penguin} style={{width: '386px', marginTop: '20px'}}/>
+      <img src={penguin} style={{width: '350px', marginTop: '20px'}}/>
 
       <Snackbar
         open={alertState.open}

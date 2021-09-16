@@ -20,15 +20,15 @@ const navBar = () => {
 
   return (
     <div style={frowCenter}>
-      <div style={{...frowBetween, width: '70%'}}>
+      <div style={{...frowBetween, width: '50%'}}>
         <div>
           <a href=''>
             <img src={penguin} style={{width: '30px'}}/>
           </a>  
         </div>
-        <div style={{...frowBetween, width: '15%'}}>
-          <Button style={{color: 'white'}} href='https://discord.com/'>Discord</Button>
-                  <Button style={{ background: '#DA291C', color: 'white' }} href='https://twitter.com/FastFoodSMB'>Twitter</Button>
+        <div style={{...frowBetween, width: '6%'}}>
+          
+        <Button style={{ background: '#DA291C', color: 'white' }} href='https://twitter.com/FastFoodSMB'>Twitter</Button>
         </div>
 
       </div>
