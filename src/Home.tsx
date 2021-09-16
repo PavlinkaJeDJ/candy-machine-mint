@@ -222,7 +222,7 @@ const Home = (props: HomeProps) => {
         }
       </MintContainer>
 
-      <img src={penguin} style={{width: '550px', marginTop: '20px'}}/>
+      <img src={penguin} style={{width: '400px', marginTop: '20px'}}/>
 
       <Snackbar
         open={alertState.open}
