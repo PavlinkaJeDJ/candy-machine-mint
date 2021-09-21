@@ -178,11 +178,11 @@ const Home = (props: HomeProps) => {
       <div style={{display: 'flex', flexDirection: 'row', marginBottom: '5px'}}>
               <h1 style={{ color: '#FFC72C', fontSize: '42px', marginBottom: '5px', marginTop: '5px' }}>Fast Food</h1>
               <span>&nbsp;&nbsp;</span>
-        <h1 style={{ color: 'white', fontSize: '42px', marginBottom: '5px', marginTop: '5px' }}>SMB</h1>
+        <h1 style={{ color: 'white', fontSize: '42px', marginBottom: '5px', marginTop: '5px' }}>TB</h1>
           </div>
 
           
-          <h3 style={{ color: 'white', marginBottom: '20px' }}>555 Fast Food Solana Monkeys</h3>
+          <h3 style={{ color: 'white', marginBottom: '20px' }}>333 Fast Food Thug Birdz</h3>
           
           
 
@@ -212,7 +212,7 @@ const Home = (props: HomeProps) => {
               isMinting ? (
                 <CircularProgress />
                 ) : (
-                  "MINT ONE FOR 0.5 SOL"
+                  "MINT ONE FOR 2 SOL"
                   )
                   ) : ( 
                     <Countdown
@@ -227,7 +227,7 @@ const Home = (props: HomeProps) => {
           </MintContainer>
 
           <div>
-              <h4 style={{ color: 'white', fontSize: '15px', marginBottom: '10px', marginTop: '10px' }}>Mint Date: 9/16 @ 6PM EST / 10PM UTC</h4>
+              <h4 style={{ color: 'white', fontSize: '15px', marginBottom: '10px', marginTop: '10px' }}>Mint Date: NOW</h4>
           </div>  
 
 
